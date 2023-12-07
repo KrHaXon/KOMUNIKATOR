@@ -1,0 +1,2 @@
+# KOMUNIKATOR
+Projekt na PK
