@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QtSql>
+#include <QSqlDatabase>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -19,6 +20,6 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QSqlDatabase db_connection;
+    QSqlDatabase DB_Connection;
 };
 #endif // MAINWINDOW_H
