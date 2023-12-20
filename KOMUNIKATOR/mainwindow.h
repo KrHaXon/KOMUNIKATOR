@@ -18,6 +18,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_Registrationbutton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase DB_Connection;
