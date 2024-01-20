@@ -4,6 +4,7 @@ ServerManager::ServerManager(ushort port, QObject *parent)
     : QObject{parent}
 {
     setupServer(port);
+    qDebug()<<_server->serverPort();
 }
 
 void ServerManager::newClientConnectionReceived()

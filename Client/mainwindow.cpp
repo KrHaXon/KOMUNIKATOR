@@ -44,7 +44,8 @@ void MainWindow::dataReceived(QByteArray data, QString user)
 void MainWindow::on_btnSend_clicked()
 {
     auto message = ui->inMessage->text().trimmed();
-    _client->sendMessage(message);
+    auto user = ui->userText->toPlainText().trimmed();
+    _client->sendMessage(message, user);
     ui->inMessage->setText("");
 
     auto chatWidget = new ChatItemWidget(this);

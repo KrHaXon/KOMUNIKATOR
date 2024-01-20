@@ -16,9 +16,12 @@ void ClientManager::connectToServer(QString ip)
     _socket->connectToHost(ip, _port);
 }
 
-void ClientManager::sendMessage(QString message)
+void ClientManager::sendMessage(QString message, QString user)
 {
-    _socket->write(message.toUtf8());
+    const auto razem = QJsonObject {{"data", message},{"user", user}};
+    const auto dokument = QJsonDocument{{razem}};
+    const auto dokumentString = QString::fromUtf8(dokument.toJson());
+    _socket->write(dokumentString.trimmed().toUtf8());
 }
 
 void ClientManager::readyRead()
@@ -28,8 +31,6 @@ void ClientManager::readyRead()
     const auto object = dokument.object();
     const auto user = object["user"].toString().trimmed().toUtf8();
     const auto data = object["data"].toString().trimmed().toUtf8();
-    //auto user = _socket->readAll();
-    //auto data = _socket->readAll();
     emit dataRecived(data, user);
 }
 

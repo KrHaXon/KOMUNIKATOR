@@ -20,6 +20,7 @@ public:
 private slots:
     void newClientConnected(QTcpSocket *client);
     void clientDisconnected(QTcpSocket *client);
+-
 
 private:
     Ui::MainWindow *ui;

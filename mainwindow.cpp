@@ -19,10 +19,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::newClientConnected(QTcpSocket *client)
 {
-    auto id = client->property("id").toInt();
-    ui->lstClients->addItem(QString("UserXyz connected: %1").arg(id));
-    auto chatWidget = new ClientChatWidget(client);
-    ui->tbChats->addTab(chatWidget, QString("Client %1").arg(id));
+   auto id = client->property("id").toInt();
+   ui->lstClients->addItem(QString("UserXyz connected: %1").arg(id));
+   auto chatWidget = new ClientChatWidget(client);
+   ui->tbChats->addTab(chatWidget, QString("Client %1").arg(id));
 }
 
 void MainWindow::clientDisconnected(QTcpSocket *client)
@@ -37,3 +37,7 @@ void MainWindow::setupServer()
     connect(_server, &ServerManager::newClientConnected, this, &MainWindow::newClientConnected);
     connect(_server, &ServerManager::ClientDisconnected, this, &MainWindow::clientDisconnected);
 }
+
+
+
+
