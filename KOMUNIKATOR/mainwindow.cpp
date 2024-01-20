@@ -1,13 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(QWidget *parent, Registration *reg)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow), regis(reg)
 {
     ui->setupUi(this);
     DB_Connection=QSqlDatabase::addDatabase("QSQLITE");
-    DB_Connection.setDatabaseName("Bazy danych0.db");
+    DB_Connection.setDatabaseName("C:\\Users\\Krzysztof\\Documents\\GitHub\\KOMUNIKATOR\\KOMUNIKATOR\\Bazy danych0.db");
     if(DB_Connection.open())
     {
         qDebug() << "DATABASE IS CONNECTED";
@@ -23,19 +23,48 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_Registrationbutton_clicked()
+
+void MainWindow::on_LoginButton_clicked()
 {
-    DB_Connection.open();
-    QSqlDatabase::database().transaction();
-    QSqlQuery QueryInsertData(DB_Connection);
-    QueryInsertData.prepare("INSERT INTO User(UserName, UserDateOfBirth, UserEmail, UserLogin, UserPassword) VALUES(:UserName,:UserDateOfBirth,:UserEmail,:UserLogin,:UserPassword)");
-    QueryInsertData.bindValue(":UserName",ui->lineEdit->text());
-    QueryInsertData.bindValue(":UserDateOfBirth",ui->lineEdit_2->text());
-    QueryInsertData.bindValue(":UserEmail",ui->lineEdit_3->text());
-    QueryInsertData.bindValue(":UserLogin",ui->lineEdit_4->text());
-    QueryInsertData.bindValue(":UserPassword",ui->lineEdit_5->text());
-    QueryInsertData.exec();
-    QSqlDatabase::database().commit();
-    DB_Connection.close();
+
+    QString name = ui->lineEditLogin->text();
+    QString password = ui->lineEditPassword->text();
+    if(name == "test" && password == "test")
+    {
+        QMessageBox::information(this, "Lol dziala", "nie moze byc");
+    }
+    else
+    {
+        QSqlQuery QueryGetUser;
+        QueryGetUser.prepare("SELECT * FROM User WHERE UserLogin=:name AND UserPassword=:password");
+        QueryGetUser.bindValue(":name", name);
+        QueryGetUser.bindValue(":password", password);
+        if(QueryGetUser.exec())
+        {
+            int UserFindCount = 0;
+            while(QueryGetUser.next())
+            {
+                UserFindCount = 1;
+            }
+            if(UserFindCount == 1)
+            {
+               QMessageBox::information(this, "Lol dziala", "nie moze byc");
+            }
+            else if(UserFindCount == 0)
+            {
+               QMessageBox::information(this, "Lol dziala nawet ze nie dziala", "to akurat moze byc xd");
+            }
+        }
+        else
+        {
+            QMessageBox::information(this, "zle", "no w tym przypadku jest fatalnie");
+        }
+    }
+}
+void MainWindow::on_pushButton_clicked()
+{
+    regis = new Registration(nullptr);
+    regis->show();
+    close();
 }
 
