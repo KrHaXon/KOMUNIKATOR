@@ -1,4 +1,4 @@
-QT       += core gui network
+QT       += core gui network sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,16 +12,22 @@ SOURCES += \
     ChatItemWidget.cpp \
     ClientManager.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+	registration.cpp \
+	secondwindow.cpp
 
 HEADERS += \
     ChatItemWidget.h \
     ClientManager.h \
-    mainwindow.h
+    mainwindow.h \
+	registration.h \
+	secondwindow.h
 
 FORMS += \
     ChatItemWidget.ui \
-    mainwindow.ui
+    mainwindow.ui \
+	registration.ui \
+	secondwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
