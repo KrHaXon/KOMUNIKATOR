@@ -6,7 +6,7 @@
 #include "ClientChatWidget.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class secondwindow;
+class MainWindow;
 }
 QT_END_NAMESPACE
 
@@ -23,7 +23,7 @@ private slots:
 
 
 private:
-    Ui::secondwindow *ui;
+    Ui::MainWindow *ui;
     ServerManager *_server;
 
 private: //methods
