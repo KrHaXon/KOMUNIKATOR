@@ -65,9 +65,11 @@ void secondwindow::on_LoginButton_clicked()
 }
 void secondwindow::on_pushButton_clicked()
 {
-    regis = new Registration(nullptr);
+    //regis = new Registration(nullptr);
+    xd = new MainWindow(nullptr);
+    xd->show();
     //xd = new MainWindow(nullptr);
-    regis->show();
+    //regis->show();
     close();
 }
 

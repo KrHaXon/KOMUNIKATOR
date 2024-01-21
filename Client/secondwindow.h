@@ -1,7 +1,6 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-#include "registration.h"
-#include "mainwindow.h"
+#ifndef SECONDWINDOW_H
+#define SECONDWINDOW_H
+
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QString>
@@ -9,8 +8,12 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QtSql/QtSql>
+#include "registration.h"
+#include "mainwindow.h"
+
 class Registration;
 class MainWindow;
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class secondwindow; }
 QT_END_NAMESPACE
@@ -34,4 +37,4 @@ private:
     Registration *regis = nullptr;
     MainWindow *xd = nullptr;
 };
-#endif // MAINWINDOW_H
+#endif // SECONDWINDOW_H

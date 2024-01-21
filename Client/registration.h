@@ -7,6 +7,7 @@
 #include <QSqlDatabase>
 #include <QtSql/QtSql>
 #include <QMessageBox>
+#include "secondwindow.h"
 class MainWindow;
 namespace Ui {
 class Registration;
