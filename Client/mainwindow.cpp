@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "ChatItemWidget.h"
-#include <QPropertyAnimation>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -45,19 +44,16 @@ void MainWindow::dataReceived(QByteArray data, QString user)
 void MainWindow::on_btnSend_clicked()
 {
     auto message = ui->inMessage->text().trimmed();
-    auto user = "JAKIŚTOMEK"; // PODMIENIĆ NAZWE UŻYTKOWNIKA KTÓRA JEST WYSYŁANA DO SERWERA
+    auto user = ui->userText->toPlainText().trimmed();
     _client->sendMessage(message, user);
     ui->inMessage->setText("");
 
     auto chatWidget = new ChatItemWidget(this);
-    chatWidget->setMessage(message, "TUKEJ", true); // PODMIENIĆ NAZWE UŻYTKOWNIKA KTÓRA JEST POKAZYWANA U NAS
+    chatWidget->setMessage(message, ui->userText->toPlainText(), true);
     auto listItemWidget = new QListWidgetItem();
     listItemWidget->setSizeHint(QSize(0,65));
     ui->lstMessages->addItem(listItemWidget);
     listItemWidget->setBackground(QColor(100,100,230));
     ui->lstMessages->setItemWidget(listItemWidget,chatWidget);
 }
-
-
-
 

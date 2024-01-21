@@ -1,13 +1,13 @@
 #include "registration.h"
 #include "ui_registration.h"
 
-Registration::Registration(QWidget *parent, MainWindow *mw) :
+Registration::Registration(QWidget *parent, secondwindow *log) :
     QWidget(parent),
-    ui(new Ui::Registration), mainik(mw)
+    ui(new Ui::Registration), logowanie(log)
 {
     ui->setupUi(this);
     DataBase = QSqlDatabase::addDatabase("QSQLITE");
-    DataBase.setDatabaseName("C:\\Users\\Krzysztof\\Documents\\GitHub\\KOMUNIKATOR\\KOMUNIKATOR\\Bazy danych0.db");
+    DataBase.setDatabaseName("C:\\Users\\Krzysztof\\Desktop\\Komunikator wersja ok\\KOMUNIKATOR-DevelopAktualny\\Client\\Bazy danych0.db");
     if(DataBase.open())
     {
         qDebug() << "DataBase for Registration is working:)";
@@ -35,7 +35,10 @@ void Registration::on_pushButton_2_clicked()
     QueryInsertData.bindValue(":UserPassword",ui->lineEdit_5->text());
     if(QueryInsertData.exec())
     {
-        QMessageBox::information(this, "SUCCESS", "YOUR REGISTRATION HAS PASSED!");
+        QMessageBox::information(this, "SUCCESS", "REGISTRATION DONE");
+        logowanie = new secondwindow(nullptr);
+        logowanie->show();
+        close();
     }
     QSqlDatabase::database().commit();
     DataBase.close();
@@ -43,8 +46,8 @@ void Registration::on_pushButton_2_clicked()
 }
 void Registration::on_pushButton_clicked()
 {
-    mainik = new MainWindow(nullptr);
-    mainik->show();
+    logowanie = new secondwindow(nullptr);
+    logowanie->show();
     close();
 }
 

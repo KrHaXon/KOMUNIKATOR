@@ -6,228 +6,244 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>759</width>
-    <height>581</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label_2">
+  <property name="styleSheet">
+   <string notr="true">QTextEdit, QListWidget, QListView{
+border-width: 2px;
+     border-style: outset;
+     border-color: #b87c23;
+}
+QLabel, QPushButton, QLineEdit{
+ font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: white;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 0px;
+    font-weight: bold;
+}
+QWidget{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #525a61, stop:1 #6a747d);
+}
+QPushButton{
+border-width: 2px;
+     border-style: outset;
+     border-color: #61f2b7;
+     background-color: #2fc286;
+}
+
+
+QGroupBox, QLineEdit, QMenuBar{
+    border-width: 2px;
+    border-style: outset;
+    border-color: #b87c23;
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: black;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 0px;
+    font-weight: bold;
+
+}
+QGroupBox::title{
+     font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: white;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    subcontrol-origin: margin;
+    bottom: 5px;
+}
+
+QSplitter::handle{
+background:transparent;
+}
+QSplitter::handle:hover{
+cursor: default;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>150</y>
-     <width>61</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>15</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>name:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>180</y>
-     <width>111</width>
+     <x>360</x>
+     <y>120</y>
+     <width>181</width>
      <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>15</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>DateOfBirth:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>430</y>
-     <width>261</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Do you have account? Sign in!</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>230</y>
-     <width>61</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>15</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Email:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>270</y>
-     <width>61</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>15</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Login:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>310</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>15</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Password:</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>473</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Sign in</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>50</y>
-     <width>151</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>15</pointsize>
+     <family>times</family>
+     <pointsize>20</pointsize>
      <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Sing up here!</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>160</y>
-     <width>113</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>200</y>
-     <width>113</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>240</y>
-     <width>113</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>280</y>
-     <width>113</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>320</y>
-     <width>113</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="echoMode">
-    <enum>QLineEdit::Password</enum>
+    <string>Sign up here!</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
      <x>370</x>
-     <y>360</y>
-     <width>91</width>
+     <y>330</y>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>times</family>
      <pointsize>14</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Sing up</string>
+    <string>Sign up</string>
    </property>
+  </widget>
+  <widget class="QSplitter" name="splitter_3">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>460</y>
+     <width>254</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLabel" name="label_7">
+    <property name="font">
+     <font>
+      <family>times</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Do you have account? Sign in!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="font">
+     <font>
+      <family>times</family>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Sign in</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>180</y>
+     <width>131</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="font">
+     <font>
+      <family>times</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>name:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="font">
+     <font>
+      <family>times</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>DateOfBirth:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="font">
+     <font>
+      <family>times</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Email:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="font">
+     <font>
+      <family>times</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Login:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="font">
+     <font>
+      <family>times</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Password:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="splitter_2">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>190</y>
+     <width>201</width>
+     <height>116</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLineEdit" name="lineEdit_2"/>
+   <widget class="QLineEdit" name="lineEdit"/>
+   <widget class="QLineEdit" name="lineEdit_3"/>
+   <widget class="QLineEdit" name="lineEdit_4"/>
+   <widget class="QLineEdit" name="lineEdit_5">
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

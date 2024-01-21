@@ -13,21 +13,21 @@ SOURCES += \
     ClientManager.cpp \
     main.cpp \
     mainwindow.cpp \
-    registration.cpp \
-    secondwindow.cpp
+	registration.cpp \
+	secondwindow.cpp
 
 HEADERS += \
     ChatItemWidget.h \
     ClientManager.h \
     mainwindow.h \
-    registration.h \
-    secondwindow.h
+	registration.h \
+	secondwindow.h
 
 FORMS += \
     ChatItemWidget.ui \
     mainwindow.ui \
-    registration.ui \
-    secondwindow.ui
+	registration.ui \
+	secondwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

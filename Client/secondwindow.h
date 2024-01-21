@@ -1,6 +1,7 @@
 #ifndef SECONDWINDOW_H
 #define SECONDWINDOW_H
-
+#include "registration.h"
+#include "mainwindow.h"
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QString>
@@ -8,12 +9,8 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QtSql/QtSql>
-#include "registration.h"
-#include "mainwindow.h"
-
-class Registration;
 class MainWindow;
-
+class Registration;
 QT_BEGIN_NAMESPACE
 namespace Ui { class secondwindow; }
 QT_END_NAMESPACE
@@ -23,7 +20,7 @@ class secondwindow : public QMainWindow
     Q_OBJECT
 
 public:
-    secondwindow(QWidget *parent = nullptr, Registration *reg = nullptr, MainWindow *siema = nullptr);
+    secondwindow(QWidget *parent = nullptr, Registration *reg = nullptr, MainWindow* mw = nullptr);
     ~secondwindow();
 
 private slots:
@@ -34,7 +31,7 @@ private slots:
 private:
     Ui::secondwindow *ui;
     QSqlDatabase DB_Connection;
-    Registration *regis = nullptr;
-    MainWindow *xd = nullptr;
+    Registration *regis;
+    MainWindow *xd;
 };
 #endif // SECONDWINDOW_H

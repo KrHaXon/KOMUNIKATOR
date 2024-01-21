@@ -1,0 +1,11 @@
+release/ChatItemWidget.o
+release/ClientManager.o
+release/main.o
+release/mainwindow.o
+release/registration.o
+release/secondwindow.o
+release/moc_ChatItemWidget.o
+release/moc_ClientManager.o
+release/moc_mainwindow.o
+release/moc_registration.o
+release/moc_secondwindow.o

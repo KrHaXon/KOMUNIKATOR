@@ -2,13 +2,14 @@
 #define REGISTRATION_H
 
 #include <QWidget>
-#include "mainwindow.h"
+#include "secondwindow.h"
+#include <QMainWindow>
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QtSql/QtSql>
 #include <QMessageBox>
 #include "secondwindow.h"
-class MainWindow;
+class secondwindow;
 namespace Ui {
 class Registration;
 }
@@ -18,7 +19,7 @@ class Registration : public QWidget
     Q_OBJECT
 
 public:
-    explicit Registration(QWidget *parent = nullptr, MainWindow *mw = nullptr);
+    explicit Registration(QWidget *parent = nullptr, secondwindow *log = nullptr);
     ~Registration();
 
 private slots:
@@ -29,7 +30,7 @@ private slots:
 private:
     Ui::Registration *ui;
     QSqlDatabase DataBase;
-    MainWindow *mainik;
+    secondwindow *logowanie;
 };
 
 #endif // REGISTRATION_H
