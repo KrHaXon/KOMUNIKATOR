@@ -13,133 +13,165 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QTextEdit, QListWidget, QListView{
+border-width: 2px;
+     border-style: outset;
+     border-color: #b87c23;
+}
+QLabel, QPushButton, QLineEdit{
+ font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: white;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 0px;
+    font-weight: bold;
+}
+QWidget{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #525a61, stop:1 #6a747d);
+}
+QPushButton{
+border-width: 2px;
+     border-style: outset;
+     border-color: #61f2b7;
+     background-color: #2fc286;
+}
+
+
+QGroupBox, QLineEdit, QMenuBar{
+    border-width: 2px;
+    border-style: outset;
+    border-color: #b87c23;
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: black;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 0px;
+    font-weight: bold;
+
+}
+QGroupBox::title{
+     font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: white;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    subcontrol-origin: margin;
+    bottom: 5px;
+}
+
+QSplitter::handle{
+background:transparent;
+}
+QSplitter::handle:hover{
+cursor: default;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="napisLogin">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>140</y>
-      <width>91</width>
-      <height>61</height>
+      <y>150</y>
+      <width>341</width>
+      <height>161</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Login:</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0" rowspan="2">
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QLabel" name="napisLogin">
+        <property name="font">
+         <font>
+          <family>times</family>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Login:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelPassword">
+        <property name="font">
+         <font>
+          <family>times</family>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Password:</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEditLogin"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEditPassword">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="LoginButton">
+       <property name="font">
+        <font>
+         <family>times</family>
+         <pointsize>15</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Sign in</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="labelPassword">
+   <widget class="QSplitter" name="splitter_2">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>190</y>
-      <width>131</width>
+      <x>50</x>
+      <y>430</y>
+      <width>271</width>
       <height>71</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
-      <bold>false</bold>
-     </font>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
     </property>
-    <property name="text">
-     <string>Password:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>150</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEditLogin">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>150</y>
-      <width>181</width>
-      <height>41</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEditPassword">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>200</y>
-      <width>181</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="LoginButton">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>260</y>
-      <width>121</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Sign in</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelRegistration">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>430</y>
-      <width>261</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Don't have account? Sign up!!!</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>480</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>14</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Sign up</string>
-    </property>
+    <widget class="QLabel" name="labelRegistration">
+     <property name="font">
+      <font>
+       <family>times</family>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Don't have account? Sign up!!!</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="font">
+      <font>
+       <family>times</family>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Sign up</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -148,7 +180,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

@@ -42,6 +42,60 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(800, 600);
+        MainWindow->setStyleSheet(QString::fromUtf8("QTextEdit, QListWidget, QListView{\n"
+"border-width: 2px;\n"
+"     border-style: outset;\n"
+"     border-color: #b87c23;\n"
+"}\n"
+"QLabel, QPushButton, QLineEdit{\n"
+" font-family: times, Times New Roman, times-roman, georgia, serif;\n"
+"    color: white;\n"
+"    margin: 0;\n"
+"    padding: 0px 0px 0px 0px;\n"
+"    letter-spacing: 0px;\n"
+"    font-weight: bold;\n"
+"}\n"
+"QMainWindow{\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #525a61, stop:1 #6a747d);\n"
+"}\n"
+"QPushButton{\n"
+"border-width: 2px;\n"
+"     border-style: outset;\n"
+"     border-color: #61f2b7;\n"
+"     background-color: #2fc286;\n"
+"}\n"
+"\n"
+"\n"
+"QGroupBox, QLineEdit, QMenuBar{\n"
+"    border-width: 2px;\n"
+"    border-style: outset;\n"
+"    border-color: #b87c23;\n"
+"    font-family: times, Times New Roman, times-roman, georgia, serif;\n"
+"    color: black;\n"
+"    margin: 0;\n"
+"    padding: 0px 0px 0px 0px;\n"
+"    letter-spacing: 0px;\n"
+"    font-weight: bold;\n"
+"\n"
+"}\n"
+"QGroupBox::title{\n"
+""
+                        "     font-family: times, Times New Roman, times-roman, georgia, serif;\n"
+"    color: white;\n"
+"    margin: 0;\n"
+"    padding: 0px 0px 0px 0px;\n"
+"    letter-spacing: 0px;\n"
+"    font-weight: bold;\n"
+"    subcontrol-origin: margin;\n"
+"    bottom: 5px;\n"
+"}\n"
+"\n"
+"QSplitter::handle{\n"
+"background:transparent;\n"
+"}\n"
+"QSplitter::handle:hover{\n"
+"cursor: default;\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -73,7 +127,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 800, 23));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

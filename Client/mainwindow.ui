@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>997</width>
-    <height>589</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,44 +21,44 @@ border-width: 2px;
 }
 QLabel, QPushButton, QLineEdit{
  font-family: times, Times New Roman, times-roman, georgia, serif;
-	color: white;
-	margin: 0;
-	padding: 0px 0px 0px 0px;
-	letter-spacing: 0px;
-	font-weight: bold;
+    color: white;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 0px;
+    font-weight: bold;
 }
 QMainWindow{
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #525a61, stop:1 #6a747d);
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #525a61, stop:1 #6a747d);
 }
 QPushButton{
 border-width: 2px;
      border-style: outset;
      border-color: #61f2b7;
-	 background-color: #2fc286;
+     background-color: #2fc286;
 }
 
 
 QGroupBox, QLineEdit, QMenuBar{
-	border-width: 2px;
+    border-width: 2px;
     border-style: outset;
     border-color: #b87c23;
-	font-family: times, Times New Roman, times-roman, georgia, serif;
-	color: black;
-	margin: 0;
-	padding: 0px 0px 0px 0px;
-	letter-spacing: 0px;
-	font-weight: bold;
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: black;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 0px;
+    font-weight: bold;
 
 }
 QGroupBox::title{
- 	font-family: times, Times New Roman, times-roman, georgia, serif;
-	color: white;
-	margin: 0;
-	padding: 0px 0px 0px 0px;
-	letter-spacing: 0px;
-	font-weight: bold;
-	subcontrol-origin: margin;
-	bottom: 5px;
+     font-family: times, Times New Roman, times-roman, georgia, serif;
+    color: white;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    subcontrol-origin: margin;
+    bottom: 5px;
 }
 
 QSplitter::handle{
@@ -66,81 +66,81 @@ background:transparent;
 }
 QSplitter::handle:hover{
 cursor: default;
-}
-</string>
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="8,1">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,10">
-      <item>
-       <widget class="QSplitter" name="splitter">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <widget class="QTextEdit" name="ipText">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Enter ip. example: 1.1.1.1</string>
-         </property>
-        </widget>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSplitter" name="splitter_2">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <widget class="QGroupBox" name="groupBox">
-         <property name="title">
-          <string>Messages</string>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout">
-          <item>
-           <widget class="QListWidget" name="lstMessages"/>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="layoutWidget">
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QLabel" name="label">
-            <property name="text">
-             <string>Message:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="inMessage"/>
-          </item>
-          <item>
-           <widget class="QPushButton" name="btnSend">
-            <property name="text">
-             <string>Send</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>GroupBox</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTextEdit" name="ipText"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Wprowadź ip np 1.1.1.1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string>GroupBox</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTextEdit" name="userText"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Wprowadź nazwe użytkownika</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Messages</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QListWidget" name="lstMessages"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="label">
         <property name="text">
-         <string>Friends</string>
+         <string>Message:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QListView" name="listView"/>
+       <widget class="QLineEdit" name="inMessage"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSend">
+        <property name="text">
+         <string>Send</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -151,8 +151,8 @@ cursor: default;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>997</width>
-     <height>24</height>
+     <width>800</width>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuOptions">

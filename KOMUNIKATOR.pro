@@ -19,7 +19,8 @@ HEADERS += \
     ChatItemWidgetServer.h \
     ClientChatWidget.h \
     ServerManager.h \
-    mainwindow.h
+    mainwindow.h \
+    ui_chatitemwidget.h
 
 FORMS += \
     ChatItemWidgetServer.ui \
@@ -32,3 +33,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 STATECHARTS +=
+
+DISTFILES +=
