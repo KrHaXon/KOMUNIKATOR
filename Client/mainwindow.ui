@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>997</width>
+    <height>589</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Client</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTextEdit, QListWidget, QListView{
+	 border-width: 2px;
+     border-style: outset;
+     border-color: #b87c23;
+}
+QLabel, QPushButton, QLineEdit{
+	color: white;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	letter-spacing: 0px;
+	font-weight: bold;
+	border-width: 2px;
+    border-radius: 8px;
+    color: #616161;
+    font-weight: bold;
+}
+QMainWindow{
+backgroundcolor: #ececec;
+}
+QPushButton{
+	 border-width: 2px;
+     border-style: outset;
+     border-color: #61f2b7;
+	 background-color: #daeddd;
+}
+
+QPushButton::hover{
+	border-color: #51e0a6;
+	background-color: #aed4b4;
+	color: 	#4f4f4f;
+}
+
+QGroupBox, QLineEdit, QMenuBar{
+	border-width: 2px;
+	border-radius: 5px;
+    border-style: outset;
+    border-color: #b87c23;
+	color: black;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	letter-spacing: 0px;
+	font-weight: bold;
+
+}
+QGroupBox::title{
+	color: #616161;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	letter-spacing: 0px;
+	font-weight: bold;
+	subcontrol-origin: margin;
+	bottom: 5px;
+}
+
+QSplitter::handle{
+background:transparent;
+}
+QSplitter::handle:hover{
+cursor: default;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="5,1">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_4" stretch="2,12">
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Enter IP</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="5,9">
+         <item>
+          <widget class="QTextEdit" name="ipText">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>Our Profile</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,4">
+            <item>
+             <widget class="QLabel" name="picture">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="ourName"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSplitter" name="splitter_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Messages</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QListWidget" name="lstMessages"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,14,1">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Message:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="inMessage"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSend">
+            <property name="text">
+             <string>Send</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Friends</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listWidget"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Manage Friends</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>997</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionConnect"/>
+    <addaction name="actionChange_Picture"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuOptions"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionConnect">
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionChange_Picture">
+   <property name="text">
+    <string>Change Picture</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

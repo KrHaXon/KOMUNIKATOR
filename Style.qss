@@ -1,0 +1,64 @@
+QTextEdit, QListWidget, QListView{
+	 border-width: 2px;
+     border-style: outset;
+     border-color: #b87c23;
+	 margin: 5px;
+	padding: 2px;
+}
+QLabel, QPushButton, QLineEdit{
+	color: white;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	letter-spacing: 0px;
+	font-weight: bold;
+	border-width: 2px;
+    border-radius: 8px;
+    color: #616161;
+    font-weight: bold;
+}
+QMainWindow{
+backgroundcolor: #ececec;
+}
+QPushButton{
+	 border-width: 2px;
+     border-style: outset;
+     border-color: #61f2b7;
+	 background-color: #daeddd;
+}
+
+QPushButton::hover{
+	border-color: #51e0a6;
+	background-color: #aed4b4;
+	color: 	#4f4f4f;
+}
+
+QGroupBox, QLineEdit, QMenuBar{
+	border-width: 2px;
+	border-radius: 5px;
+    border-style: outset;
+    border-color: #b87c23;
+	color: black;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	letter-spacing: 0px;
+	font-weight: bold;
+
+}
+QGroupBox::title{
+	color: #616161;
+	margin: 2;
+	padding: 0px 0px 0px 0px;
+	font-weight: bold;
+	subcontrol-origin: margin;
+	bottom: 5px;
+	font-size:12px;
+}
+
+QSplitter::handle{
+background:transparent;
+}
+QSplitter::handle:hover{
+cursor: default;
+}
+
+
